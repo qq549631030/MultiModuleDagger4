@@ -1,8 +1,8 @@
 ### 组件化项目
 
-我们在[Dagger2多模块项目依赖方式选择二]()的基础上改造实现
+我们在[Dagger2多模块项目依赖方式选择二](https://github.com/qq549631030/MultiModuleDagger2/blob/master/README.md)的基础上改造实现
 
-具体实现和[dagger.android多模块项目实现一]()差不多，唯一差异是MultiModuleAndroidInjector放在BaseApplication中
+具体实现和[dagger.android多模块项目实现一](https://github.com/qq549631030/MultiModuleDagger3/blob/master/README.md)差不多，唯一差异是MultiModuleAndroidInjector放在BaseApplication中
 
 ```kotlin
 open class BaseApplication : Application(), HasAndroidInjector {
