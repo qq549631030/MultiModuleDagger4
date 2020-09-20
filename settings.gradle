@@ -1,0 +1,5 @@
+include ':news'
+include ':user'
+include ':base'
+include ':app'
+rootProject.name = "MultiModuleDagger4"
