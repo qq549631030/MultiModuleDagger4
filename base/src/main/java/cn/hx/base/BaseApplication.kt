@@ -1,6 +1,7 @@
 package cn.hx.base
 
 import android.app.Application
+import cn.hx.applike.api.AppLikeManager
 import dagger.android.AndroidInjector
 import dagger.android.HasAndroidInjector
 
@@ -13,6 +14,12 @@ open class BaseApplication : Application(), HasAndroidInjector {
         super.onCreate()
         instance = this
         appComponent = DaggerAppComponent.factory().create(this)
+        AppLikeManager.onCreate(this)
+    }
+
+    override fun onTerminate() {
+        AppLikeManager.onTerminate(this)
+        super.onTerminate()
     }
 
     companion object {
